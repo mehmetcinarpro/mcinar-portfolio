@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// Styles
+import theme from './styles/theme';
+// Components
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import PortfolioPage from './pages/PortfolioPage/PortfolioPage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import HomePage from './pages/HomePage/HomePage';
+// Material UI
+import { ThemeProvider, StylesProvider } from '@material-ui/core/styles';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <StylesProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          <Navbar />
+          <Switch>
+            <Route path="/portfolio">
+              <PortfolioPage />
+            </Route>
+            <Route path="/about">
+              <AboutPage />
+            </Route>
+            <Route path="/contact">
+              <ContactPage />
+            </Route>
+            <Route path="/">
+              <HomePage />
+            </Route>
+          </Switch>
+          <Footer />
+        </ThemeProvider>
+      </StylesProvider>
+    </Router>
+  )
 }
 
 export default App;

@@ -1,0 +1,13 @@
+.container {
+
+    flex-grow: 1;
+    background-color: #2A2B2A;
+    color: #ffffff;
+    padding: 35px 0px;
+    margin-top: calc(5% + 25px);
+    bottom: 0;
+
+    .icon {
+        margin-right: 8px;
+    }
+}
