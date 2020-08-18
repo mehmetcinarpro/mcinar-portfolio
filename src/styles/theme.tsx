@@ -5,10 +5,11 @@ const $bodyFont: string = "'Lato', sans-serif";
 
 const theme = createMuiTheme({
     palette: {
-        primary: { main: '#2A2B2A' },
-        secondary: { main: '#FF206E' },
+        primary: { main: '#0D1F22' },
+        secondary: { main: '#6f732f' },
+        //third color : #3c5233
         text: {
-            primary: '#2A2B2A',
+            primary: '#0D1F22',
         },
     },
 
@@ -24,7 +25,7 @@ const theme = createMuiTheme({
             '&:after': {
                 content: '" "',
                 display: 'block',
-                backgroundColor: '#2A2B2A',
+                backgroundColor: '#0D1F22',
                 height: '5px',
                 width: '25px',
                 position: 'absolute',
@@ -39,7 +40,7 @@ const theme = createMuiTheme({
             '&:after': {
                 content: '" "',
                 display: 'block',
-                backgroundColor: '#FF206E',
+                backgroundColor: '#6f732f',
                 height: '5px',
                 width: '25px',
                 position: 'absolute',

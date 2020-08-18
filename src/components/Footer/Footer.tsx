@@ -11,7 +11,7 @@ import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 const Footer: React.FC = () => {
     return (
-        <div className={styles.container}>
+        <div className={styles.root}>
             <Container>
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
