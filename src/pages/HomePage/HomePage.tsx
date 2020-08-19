@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// Styles
+import styles from "./HomePage.module.scss";
 // Material UI
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -11,10 +13,17 @@ import Banner from '../../components/Banner/Banner';
 const HomePage: React.FC = () => {
     return (
         <>
-            <Banner
-                title="Hello, I'm Mehmet."
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida interdum molestie. Proin maximus erat velit. Cras feugiat diam at ipsum posuere vulputate."
-            />
+            <div className={styles.root}>
+                <Container>
+                    <Grid container>
+                        <Grid item xs={12} container justify="center" className={styles.hero}>
+                            <Typography variant="h2">
+                                Hi, I'm Mehmet, a full-stack developer
+                    </Typography>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </div>
             <Container>
                 <Grid container spacing={3}>
                     <Grid item xs={12} sm={4}>
@@ -51,7 +60,7 @@ const HomePage: React.FC = () => {
                     </Button>
                     </Grid>
                 </Grid>
-            </Container>
+            </Container >
         </>
     )
 }

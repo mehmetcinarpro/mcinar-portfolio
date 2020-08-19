@@ -21,7 +21,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const Navbar: React.FC = () => {
     return (
-        <AppBar position="fixed">
+        <AppBar position="relative" color="transparent" elevation={0} className={styles.container}>
             <Container>
                 <Toolbar>
                     <Grid container>
