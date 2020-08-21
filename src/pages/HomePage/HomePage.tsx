@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 // Components
 import About from '../../components/About/About';
+import Portfolio from '../../components/Portfolio/Portfolio';
 
 const HomePage: React.FC = () => {
     return (
@@ -38,43 +39,8 @@ const HomePage: React.FC = () => {
                 </Container>
             </div>
             <About />
-            <Container>
-                <Grid container spacing={3}>
-                    <Grid item xs={12} sm={4}>
-                        <Typography variant="h3">
-                            Portfolio
-                    </Typography>
-                        <Typography variant="body1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida interdum molestie. Proin maximus erat velit. Cras feugiat diam at ipsum posuere vulputate.
-                    </Typography>
-                        <Button component={Link} variant="contained" size="large" color="secondary" to="/portfolio">
-                            View Portfolio
-                    </Button>
-                    </Grid>
-                    <Grid item xs={12} sm={4}>
-                        <Typography variant="h3">
-                            About Me
-                    </Typography>
-                        <Typography variant="body1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida interdum molestie. Proin maximus erat velit. Cras feugiat diam at ipsum posuere vulputate.
-                    </Typography>
-                        <Button component={Link} variant="contained" size="large" color="secondary" to="/about">
-                            Learn More
-                    </Button>
-                    </Grid>
-                    <Grid item xs={12} sm={4}>
-                        <Typography variant="h3">
-                            Contact Me
-                    </Typography>
-                        <Typography variant="body1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida interdum molestie. Proin maximus erat velit. Cras feugiat diam at ipsum posuere vulputate.
-                    </Typography>
-                        <Button component={Link} variant="contained" size="large" color="secondary" to="/contact">
-                            Contact Me
-                    </Button>
-                    </Grid>
-                </Grid>
-            </Container >
+            <Portfolio />
+
         </>
     )
 }

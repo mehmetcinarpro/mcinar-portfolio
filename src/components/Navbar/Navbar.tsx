@@ -33,8 +33,8 @@ const Navbar: React.FC = () => {
                         <Grid item xs />
                         {menu.map(({ name, path }) => (
                             path.includes("http")
-                                ? <Button component={MuiLink} color="inherit" href={path}>{name}</Button>
-                                : <Button component={Link} color="inherit" to={path}>{name}</Button>
+                                ? <Button key={name} component={MuiLink} color="inherit" href={path}>{name}</Button>
+                                : <Button key={name} component={Link} color="inherit" to={path}>{name}</Button>
                         ))}
                     </Grid>
                 </Toolbar>
