@@ -6,12 +6,12 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const menu: MenuItem[] = [
     {
-        name: 'Portfolio',
-        path: '/portfolio'
-    },
-    {
         name: 'About Me',
         path: '/about'
+    },
+    {
+        name: 'Portfolio',
+        path: '/portfolio'
     },
     {
         name: 'Contact',

@@ -6,7 +6,6 @@ import theme from './styles/theme';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import PortfolioPage from './pages/PortfolioPage/PortfolioPage';
-import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/HomePage/HomePage';
 // Material UI
@@ -21,9 +20,6 @@ const App: React.FC = () => {
           <Switch>
             <Route path="/portfolio">
               <PortfolioPage />
-            </Route>
-            <Route path="/about">
-              <AboutPage />
             </Route>
             <Route path="/contact">
               <ContactPage />

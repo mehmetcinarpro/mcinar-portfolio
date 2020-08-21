@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// Assets
+import mehmetCinar from '../../assets/images/me.png';
 // Styles
 import styles from "./HomePage.module.scss";
 // Material UI
@@ -8,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 // Components
-import Banner from '../../components/Banner/Banner';
+import About from '../../components/About/About';
 
 const HomePage: React.FC = () => {
     return (
@@ -16,14 +18,26 @@ const HomePage: React.FC = () => {
             <div className={styles.root}>
                 <Container>
                     <Grid container>
-                        <Grid item xs={12} container justify="center" className={styles.hero}>
-                            <Typography variant="h2">
-                                Hi, I'm Mehmet, a full-stack developer
-                    </Typography>
+                        <Grid item xs={12} md={6} container direction="column" justify="center">
+                            <Typography variant="h3">
+                                Hi, I'm Mehmet,
+                            </Typography>
+                            <Typography variant="h4">
+                                a full-stack developer based in Belgium.
+                            </Typography>
+                            <Grid item xs={12} sm={4}>
+                                <Button component={Link} variant="contained" size="large" color="secondary" to="/portfolio" className={styles.button}>
+                                    My Portfolio
+                                </Button>
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={12} md={6} container justify="center">
+                            <img src={mehmetCinar} alt="Mehmet Cinar" className={styles.image} />
                         </Grid>
                     </Grid>
                 </Container>
             </div>
+            <About />
             <Container>
                 <Grid container spacing={3}>
                     <Grid item xs={12} sm={4}>
